@@ -39,8 +39,7 @@ print(full_file_name)
 
 # BEGIN PROBLEM 2 SOLUTION
 def write_into_file(filename, file_content):
-    path= filename
-    file_open = open(path, 'w') #could also do file_open = open(filename, 'w')
+    file_open = open(filename, 'w')
     for line in file_content:
         file_open.write(f"{file_content}")
     file_open.close()
@@ -49,7 +48,8 @@ def write_into_file(filename, file_content):
 last_two_lines = []
 file_handle = open(full_file_name)
 file_content = file_handle.readlines()
-last_two_lines.append(file_content[1:])
+last_two_lines = file_content[1:]
+print(last_two_lines)
 filename = 'file2.txt'
 write_into_file(filename,last_two_lines)
 print(last_two_lines)
