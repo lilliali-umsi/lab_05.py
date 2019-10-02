@@ -40,8 +40,8 @@ print(full_file_name)
 # BEGIN PROBLEM 2 SOLUTION
 def write_into_file(filename, file_content):
     file_open = open(filename, 'w')
-    for line in file_content:
-        file_open.write(f"{file_content}")
+    #for line in file_content:
+    file_open.write(f"{file_content}")
     file_open.close()
 
 
@@ -49,7 +49,6 @@ last_two_lines = []
 file_handle = open(full_file_name)
 file_content = file_handle.readlines()
 last_two_lines = file_content[1:]
-print(last_two_lines)
 filename = 'file2.txt'
 write_into_file(filename,last_two_lines)
 print(last_two_lines)
@@ -82,5 +81,6 @@ for file in all_files:
 write_into_file('summary.txt',unique_lines)
 print(unique_lines)
 # END PROBLEM 3 SOLUTION
-
+#how can we check if a value already exists in unique_lines and only append it if it doesn't already exist
+#you'll need for loops to iterate through file_name_list and the lines within each file
 # END LAB EXERCISE
